@@ -23,7 +23,8 @@
     overflow: hidden;
     background-color: white;
     display: flex;
-    margin-left: 40px;
+    margin-left: 0px;
+    align-items: center;
     height: 50px;
   }
   
@@ -50,8 +51,12 @@
     height: auto;
     background-color: white;
     margin-top: 10px;
+    margin-left: -40px;
+    margin-right: 0px;
     margin-bottom: 10px;
     margin-bottom: 0px;
+    display: flex;
+    align-items: center;
   }
 
   .dropbtn {
@@ -81,7 +86,7 @@
   }
   
   .dropdown-content a {
-    color: darkblue;
+    color: #043040;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -104,6 +109,7 @@
     margin-bottom: 15px;
     margin-left: 30px;
     text-decoration: none;
+    font-family: "Poppins", sans-serif;
     color: black;
   }
   
@@ -125,6 +131,7 @@
   .dropdown1-content {
     display: none;
     position: absolute;
+    color: #043040;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -132,7 +139,7 @@
   }
   
   .dropdown1-content a {
-    color: lightblue;
+    color: #043040;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -188,13 +195,14 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
+    color: #043040;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   
   .dropdown2-content a {
-    color: lightblue;
+    color: #043040;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -231,6 +239,7 @@
   .dropdown3-content {
     display: none;
     position: absolute;
+    color: #043040;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -238,7 +247,7 @@
   }
   
   .dropdown3-content a {
-    color: lightblue;
+    color: #043040;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -287,6 +296,7 @@
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     line-height: 20px;
+    border: 0px;
   } 
   .butt:hover{color: #043040;}
 
@@ -347,6 +357,7 @@
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     border-color: #cda274;
+  
   } 
   .buuu:hover{color: black; background-color: white;border-color:black ;}
 
@@ -380,16 +391,284 @@
 
   div.gallery {
     border: 1px solid #ccc;
+    background-image: url(assets/images/eko-gardens.jpg);
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
   }
   
+  div.gallery .title{
+    transform: translateY(260px);
+    transition: ease-in-out 0.3s;
+    font-size: 29px;
+    font-family:"Oswald", sans-serif ;
+    margin-left: 30px;
+    border-bottom: 1px solid #cda274;
+  }
+
+  div.gallery .content{
+    visibility: hidden;
+    transition: 0.04s ease-in 0.1s;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 30px;
+  }
+
+  div.gallery .More{
+    visibility: hidden;
+    transition: 0.04s ease-in 0.1s;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 30px;
+    color: #cda274;
+    font-size: 13px;
+    font-weight: 400;
+    
+  }
+
+  div.gallery:hover .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 10%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+    height: 100%;
+    width: 100%;
+    /* width: 30%; */
+
+  }
+  
+  div.gallery:hover .overlay .title{
+    transform: translateY(0px);
+
+  }
+  div.gallery:hover .overlay .content{
+    visibility: visible;
+    /* transform: translateY(10px); */
+
+  }
+  div.gallery:hover .overlay .More{
+    visibility: visible;
+  }
+
+  div.gallery_one {
+    border: 1px solid #ccc;
+    background-image: url(assets/images/eko-hotel.jpg);
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    /* width: 30%; */
+  }
+
+  div.gallery_one .title{
+    transform: translateY(260px);
+    transition: ease-in-out 0.3s;
+    font-size: 29px;
+    font-family:"Oswald", sans-serif ;
+    margin-left: 30px;
+    border-bottom: 1px solid #cda274;
+  }
+
+  div.gallery_one .content{
+    visibility: hidden;
+    transition: 0.04s ease-in-out 0.1s;
+    transform: translateY(50px);
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 30px;
+  }
+
+  div.gallery_one .More{
+    visibility: hidden;
+    transition: 0.04s ease-in 0.1s;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 30px;
+    color: #cda274;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  div.gallery_one:hover .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    /* width: 30%; */
+
+  }
+  
+  div.gallery_one:hover .overlay .title{
+    transform: translateY(0px);
+
+  }
+  div.gallery_one:hover .overlay .content{
+    visibility: visible;
+    transform: translateY(10px);
+
+  }
+
+
+div.gallery_one:hover .overlay .More{
+  visibility: visible;
+}
+
+
+  div.gallery2 {
+    border: 1px solid #ccc;
+    background-image: url(assets/images/eko-suites.webp);
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    /* width: 30%; */
+  }
+
+  div.gallery2 .title{
+    transform: translateY(260px);
+    transition: ease-in-out 0.3s;
+    font-size: 29px;
+    font-family:"Oswald", sans-serif ;
+    margin-left: 30px;
+    border-bottom: 1px solid #cda274;
+  }
+
+  div.gallery2 .content{
+    visibility: hidden;
+    transition: 0.04s ease-in-out 0.1s;
+    transform: translateY(50px);
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 30px;
+  }
+
+  div.gallery2 .More{
+    visibility: hidden;
+    transition: 0.04s ease-in 0.1s;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 30px;
+    color: #cda274;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  div.gallery2:hover .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    /* width: 30%; */
+
+  }
+  
+  div.gallery2:hover .overlay .title{
+    transform: translateY(0px);
+
+  }
+  div.gallery2:hover .overlay .content{
+    visibility: visible;
+    transform: translateY(10px);
+  }
+
+
+div.gallery2:hover .overlay .More{
+  visibility: visible;
+}
+
+  div.gallery3 {
+    border: 1px solid #ccc;
+    background-image: url(assets/images/eko-signature.webp);
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    /* width: 30%; */
+  }
+
+  div.gallery3 .title{
+    transform: translateY(260px);
+    transition: ease-in-out 0.3s;
+    font-size: 29px;
+    font-family:"Oswald", sans-serif ;
+    margin-left: 30px;
+    border-bottom: 1px solid #cda274;
+  }
+
+  div.gallery3 .content{
+    visibility: hidden;
+    transition: 0.04s ease-in-out 0.1s;
+    transform: translateY(50px);
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 30px;
+  }
+
+  div.gallery3 .More{
+    visibility: hidden;
+    transition: 0.04s ease-in 0.1s;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 30px;
+    color: #cda274;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  div.gallery3:hover .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    /* width: 30%; */
+
+  }
+  
+  div.gallery3:hover .overlay .title{
+    transform: translateY(0px);
+
+  }
+  div.gallery3:hover .overlay .content{
+    visibility: visible;
+    transform: translateY(10px);
+  }
+  
+
+div.gallery3:hover .overlay .More{
+  visibility: visible;
+}
+
   div.gallery:hover {
     border: 1px solid #777;
   }
   
-  div.gallery img {
+  /* div.gallery img {
     width: 100%;
     height: auto;
-  }
+  } */
   
   div.desc {
     padding: 15px;
@@ -440,6 +719,7 @@
     border-color: #cda274;
     margin-top: 50px;
     margin-bottom: 80px;
+    border: none;
   }
 
   .view :hover{color: #043040; background-color: white;border-color:black ;}
@@ -493,6 +773,7 @@
     font-family: "Poppins", sans-serif;
     line-height: 26px;
     margin-top: 30px;
+    margin-right: 30px;
   }
 
   .pad p i {
